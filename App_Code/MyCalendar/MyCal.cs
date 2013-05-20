@@ -15,10 +15,7 @@ public class MyCal
 
     public List<MyCalEvent> evts {get;set;}
 
-	public MyCal()
-	{
-		
-	}
+	public MyCal(){}
 
 
     public MyCal(List<MyCalEvent> evts){
@@ -26,9 +23,9 @@ public class MyCal
     }
   
 
-      public string  OutputICS(){
+    public string  OutputICS(){
     
-     StringBuilder output = new StringBuilder();
+     	StringBuilder output = new StringBuilder();
      
      foreach (MyCalEvent e in this.evts){
      
