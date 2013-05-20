@@ -24,17 +24,16 @@ public class MyCalEvent
     public string organizer { get; set; }
     public Valarm alarm { get; set; }
 
-	private MyCalEvent()
-	{
-		//
-		// TODO: 在這裡新增建構函式邏輯
-		//
-	}
+    private MyCalEvent(){}
 
   //build a easy sample event
-    public MyCalEvent(DateTime dtstart, DateTime dtsend, string method) { }
+    public MyCalEvent(DateTime dtstart, DateTime dtsend, string method) {
+    		
+         new MyCalEvent(dtstart,DateTime.Now,dtsend,method,"Test ICalendar Format",
+               "test",Guid.NewGuid().ToString(), "Test", "Test", "Test", "15M"); 
+    }
   
-  public MyCalEvent(DateTime dtstart,DateTime dtstamp,DateTime dtsend,string method,string title,
+    public MyCalEvent(DateTime dtstart,DateTime dtstamp,DateTime dtsend,string method,string title,
                     string location,String UID,string description,string summary,string organizer,Valarm alarm ){
      
       this.dtstart = dtstart;
