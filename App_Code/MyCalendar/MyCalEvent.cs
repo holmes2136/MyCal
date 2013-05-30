@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 
 
@@ -30,10 +29,10 @@ public class MyCalEvent
     public MyCalEvent(DateTime dtstart, DateTime dtsend, string method) {
     		
          new MyCalEvent(dtstart,DateTime.Now,dtsend,method,"Test ICalendar Format",
-               "test",Guid.NewGuid().ToString(), "Test", "Test", "Test", "15M"); 
+               "test",Guid.NewGuid().ToString(), "Test", "Test", "Test",new Valarm("15M")); 
     }
   
-    public MyCalEvent(DateTime dtstart,DateTime dtstamp,DateTime dtsend,string method,string title,
+    public MyCalEvent(DateTime dtstart,DateTime dtstamp,DateTime dtend,string method,string title,
                     string location,String UID,string description,string summary,string organizer,Valarm alarm ){
      
       this.dtstart = dtstart;

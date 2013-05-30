@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 
 
@@ -16,13 +15,37 @@ namespace MyCalendar {
         public string action { get; set; }
         public string description { get; set; }
 
-        public Valarm()
-        {
-            //
-            // TODO: 在這裡新增建構函式邏輯
-            //
+        public const string action_display = "Display";
+        public const string description_reminder = "Reminder";
+
+
+        private Valarm(){}
+
+        public Valarm(string trigger) {
+
+            this.trigger = trigger;
+            this.action = Valarm.action_display;
+            this.description = Valarm.description_reminder;
+
         }
+
+        public Valarm(string trigger, string  action, string description) {
+
+            this.trigger = trigger;
+            this.action = action;
+            this.description = description;
+       
+        }
+
+
+     
     }
+
+
+    
+
+
+    
 
 
 }
