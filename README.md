@@ -4,6 +4,6 @@ MyCal
 ICalendar Output
 
 
-Still build a prototype ~
+Wrapper icalendar builder 
 
 This class can output icalendar format easily!
